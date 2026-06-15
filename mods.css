@@ -1,0 +1,64 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 2px 1px rgb(197, 179, 213);
+
+    background-color: white;
+    font-family: 'chewy', sans-serif;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header a {
+    font-size: 18px;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.header a:hover {
+    color: rgb(128, 128, 128);
+}
+
+.header-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#bella {
+    width: 150px;
+    height: 150px;
+}
+
+.chewy-regular {
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+    font-family: 'chewy', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 50px;
+    margin-top: -40px;
+
+}
+
+.card {
+    background-color: #ede7ff;
+    height: 200px;
+}

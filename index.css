@@ -1,0 +1,105 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    border-radius: 4px;
+    box-shadow: 2px 1px 2px 1px rgb(197, 179, 213);
+
+    background-color: white;
+    font-family: 'chewy', sans-serif;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header a {
+    font-size: 18px;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.header a:hover {
+    color: rgb(128, 128, 128);
+}
+
+.header-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#bella {
+    width: 150px;
+    height: 150px;
+}
+
+.chewy-regular {
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.containers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.container-1 {
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-left: 40px;
+    padding-left: 0;
+    width: 40%;
+    height: 190px;
+    background-color: #ede7ff;
+    display: flex;
+    
+    align-items: center;
+}
+
+#devi {
+    margin-left: -20px;
+    width: 220px;
+    height: 230px
+}
+
+.container-2 {
+    box-sizing: border-box;
+    display: flex;
+    width: 40%;
+    height: 400px;
+    margin-top: 40px;
+    margin-right: 40px;
+    background-color: #ede7ff;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#cloud {
+    width: 300px;
+    height: 250px;
+    margin-bottom: -80px;
+}
+
+#nexus, #kofi {
+    
+    height: 50px;
+    margin-top: -250px;
+    padding: 20px 20px;
+    
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+    margin-top: -100px;
+    
+}
