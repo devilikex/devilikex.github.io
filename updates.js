@@ -23,8 +23,7 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
 
         const posts = data.posts;
 
-        const MarkdownEngine = (typeof Remarkable !== 'undefined') ? Remarkable : remarkable;
-        const md = new MarkdownEngine();
+        const md = (typeof Remarkable !== 'undefined') ? new Remarkable() : new remarkable.Remarkable();
 
 
         posts.forEach(post => {
