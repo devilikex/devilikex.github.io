@@ -2,6 +2,7 @@ backend:
   name: github
   repo: devilikex/devilikex.github.io
   branch: main
+  auth_endpoint: https://sveltia.org
   media_folder: "images/uploads"
   public_folder: "/images/uploads"
   collections:
