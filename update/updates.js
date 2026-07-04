@@ -46,10 +46,13 @@ postElement.innerHTML = `
     </div>
 `;
 
-
             listContainer.insertBefore(postElement, listContainer.firstChild);
 
         });
+
+        if (window.lyket && typeof window.lyket.reparse === 'function') {
+        window.lyket.reparse();
+            }
 
         if (posts.length === 0) {
             listContainer.innerHTML = "<p>No new updates.</p>";
