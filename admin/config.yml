@@ -1,18 +1,17 @@
 backend:
-backend:
   name: github
   repo: devilikex/devilikex.github.io
   branch: main
-  auth_endpoint: https://sveltia.org 
+  auth_endpoint: https://sveltia.org
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 collections:
-  - name: "updatesCol"
+  - name: "updates_collection"
     label: "Updates"
-    files: 
+    files:
       - file: "_data/updates.json"
         label: "Blog Updates"
-        name: "blogUpdates"
+        name: "blog_updates"
         fields:
           - label: "Blog Posts"
             name: "posts"
@@ -21,3 +20,4 @@ collections:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Publish Date", name: "date", widget: "datetime"}
               - {label: "Body", name: "body", widget: "markdown"}
+
