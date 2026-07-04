@@ -62,13 +62,12 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
             listContainer.innerHTML = "<p>No new updates.</p>";
             
         } else {
-
-            if (typeof lyket !== 'undefined' && typeof lyket.run === 'function') {
-                lyket.run();
+            // FIX: Load the Lyket script dynamically now that HTML elements are written to DOM
+            const lyketScript = document.createElement("script");
+            lyketScript.src = "https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_9dc0c986b24d96687df99fd2a3da29";
+            document.body.appendChild(lyketScript);
             }
         }
-
-    }
         
         catch (error) {
             console.error("Error fetching updates: ", error);
