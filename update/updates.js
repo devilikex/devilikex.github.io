@@ -27,7 +27,7 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
 
 
         posts.forEach(post => {
-            
+
             const postDate = new Date(post.date).toLocaleDateString();
             const parsedBody = md.render(post.body || "");
             const postElement = document.createElement("article");
@@ -76,5 +76,5 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
             }
     }
 
-    //document.addEventListener("DOMContentLoaded", getUpdates);
-    getUpdates();
+    document.addEventListener("DOMContentLoaded", getUpdates);
+    //getUpdates();
