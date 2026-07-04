@@ -8,7 +8,7 @@ async function getUpdates() {
         return;
     }
 
-    if (typeof marked === 'undefined') {
+    if (typeof Remarkable === 'undefined') {
         setTimeout(getUpdates, 100);
         return;
     }
@@ -22,9 +22,11 @@ async function getUpdates() {
         listContainer.innerHTML = "";
 
         const posts = data.posts;
+
+        const md = new Remarkable();
         posts.forEach(post => {
             const postDate = new Date(post.date).toLocaleDateString();
-            const parsedBody = marked.parse(post.body || "");
+            const parsedBody = md.render(post.body || "");
             const postElement = document.createElement("article");
             postElement.className = "blogPost";
             
@@ -33,7 +35,7 @@ async function getUpdates() {
                 <span class="postDate">${postDate}</span>
                 <div class="postBody">${parsedBody}</div>
             `;
-            
+
             listContainer.insertBefore(postElement, listContainer.firstChild);
 
         });
