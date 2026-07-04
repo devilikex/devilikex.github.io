@@ -1,7 +1,7 @@
-const jsonURL = "devilikex/devilikex.github.io/main/updates.json";
+const jsonURL = "https://github.io";
 
 async function getUpdates() {
-    const listContainer = document.getElementById("newList");
+    const listContainer = document.getElementById("newsList");
 
     if(!listContainer) {
         console.error("element not found");
