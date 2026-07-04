@@ -53,4 +53,5 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
             }
     }
 
-    document.addEventListener("DOMContentLoaded", getUpdates);
+    //document.addEventListener("DOMContentLoaded", getUpdates);
+    getUpdates();
