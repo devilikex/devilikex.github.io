@@ -8,6 +8,11 @@ async function getUpdates() {
         return;
     }
 
+    if (typeof marked === 'undefined') {
+        setTimeout(getUpdates, 100);
+        return;
+    }
+
     try {
         const response = await fetch(jsonURL);
         if (!response.ok) 
@@ -22,11 +27,13 @@ async function getUpdates() {
             const parsedBody = marked.parse(post.body || "");
             const postElement = document.createElement("article");
             postElement.className = "blogPost";
+            
             postElement.innerHTML = `
                 <h3 class="postTitle">${post.title}</h3>
                 <span class="postDate">${postDate}</span>
                 <div class="postBody">${parsedBody}</div>
             `;
+            
             listContainer.insertBefore(postElement, listContainer.firstChild);
 
         });
