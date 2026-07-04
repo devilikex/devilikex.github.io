@@ -8,7 +8,7 @@ collections:
   - name: "updates_collection"
     label: "Updates"
     files:
-      - file: " /_data/updates.json"
+      - file: "_data/updates.json"
         label: "Blog Updates"
         name: "blog_updates"
         fields:
