@@ -32,11 +32,20 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
             const postElement = document.createElement("article");
             postElement.className = "blogPost";
             
-            postElement.innerHTML = `
-                <h3 class="postTitle">${post.title}</h3>
-                <span class="postDate">${postDate}</span>
-                <div class="postBody">${parsedBody}</div>
-            `;
+postElement.innerHTML = `
+    <h3 class="postTitle">${post.title}</h3>
+    <span class="postDate">${postDate}</span>
+    <div class="postBody">${parsedBody}</div>
+    
+    <div class="blogLikes">
+        <div 
+          data-lyket-type="like" 
+          data-lyket-id="${post.title.replace(/\s+/g, '-').toLowerCase()}" 
+          data-lyket-namespace="devilike-blog"
+        ></div>
+    </div>
+`;
+
 
             listContainer.insertBefore(postElement, listContainer.firstChild);
 
