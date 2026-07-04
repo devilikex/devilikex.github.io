@@ -51,7 +51,7 @@ h2 {
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;    
 }
 
@@ -61,22 +61,24 @@ h2 {
     flex-direction: column; /* 1. FORCES POSTS TO STACK DOWNWARD */
     align-items: center;    /* 2. CENTERS POSTS HORIZONTALLY */
     
-    width: 55%;
+    width: 60%;
     height: auto;           /* 3. ALLOWS THE PURPLE BOX TO STRETCH DOWNWARD */
     background-color: #ede7ff;
     padding: 20px;          /* Adds clean breathing room inside the purple box */
     border-radius: 8px;     /* Optional: Rounds the corners to look cleaner */
+    margin-left: 20px;     /* Adds space between the purple box and the right sidebar */
 }
 
 .update {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 45%; /* Your right sidebar width */
+    width: 30%; /* Your right sidebar width */
     background-color: #ede7ff;
     padding: 25px; 
     border-radius: 12px;
     height: fit-content; /* FIXED: Prevents this box from freezing at 400px */
+    margin-right: 20px; /* Adds space between the purple box and the left news section */
 }
 
 .postBody img {
