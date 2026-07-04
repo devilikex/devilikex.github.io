@@ -8,10 +8,10 @@ async function getUpdates() {
         return;
     }
 
-    if (typeof Remarkable === 'undefined') {
-        setTimeout(getUpdates, 100);
-        return;
-    }
+if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
+    setTimeout(getUpdates, 100);
+    return;
+}
 
     try {
         const response = await fetch(jsonURL);
@@ -23,7 +23,10 @@ async function getUpdates() {
 
         const posts = data.posts;
 
-        const md = new Remarkable();
+        const MarkdownEngine = (typeof Remarkable !== 'undefined') ? Remarkable : remarkable;
+        const md = new MarkdownEngine();
+
+
         posts.forEach(post => {
             const postDate = new Date(post.date).toLocaleDateString();
             const parsedBody = md.render(post.body || "");
