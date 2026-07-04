@@ -37,11 +37,15 @@ postElement.innerHTML = `
     <span class="postDate">${postDate}</span>
     <div class="postBody">${parsedBody}</div>
     
-    <div class="blogLikes">
+    <div class="blog-likes">
         <div 
           data-lyket-type="like" 
           data-lyket-id="${post.title.replace(/\s+/g, '-').toLowerCase()}" 
           data-lyket-namespace="devilike-blog"
+          data-lyket-template="heart"
+          data-lyket-color-primary="#413f41"
+          data-lyket-color-highlight="#fca9fc"
+          data-lyket-font-family="chewy, sans serif"
         ></div>
     </div>
 `;
