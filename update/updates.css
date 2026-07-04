@@ -58,19 +58,21 @@ h2 {
 .news {
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Forces blog posts to stack neatly vertically */
-    width: 70%; /* Gives your blog timeline a slightly wider area */
-    background-color: #ede7ff; /* Keeps your custom light purple background */
-    padding: 25px;
-    border-radius: 12px;
-    height: fit-content; /* FIXED: Let the height grow with your text! */
+    flex-direction: column; /* 1. FORCES POSTS TO STACK DOWNWARD */
+    align-items: center;    /* 2. CENTERS POSTS HORIZONTALLY */
+    
+    width: 55%;
+    height: auto;           /* 3. ALLOWS THE PURPLE BOX TO STRETCH DOWNWARD */
+    background-color: #ede7ff;
+    padding: 20px;          /* Adds clean breathing room inside the purple box */
+    border-radius: 8px;     /* Optional: Rounds the corners to look cleaner */
 }
 
 .update {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 30%; /* Your right sidebar width */
+    width: 45%; /* Your right sidebar width */
     background-color: #ede7ff;
     padding: 25px; 
     border-radius: 12px;
