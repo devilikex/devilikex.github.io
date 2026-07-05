@@ -1,5 +1,5 @@
 const jsonURL = "https://devilikex.github.io/_data/updates.json";
-//idk
+
 async function getUpdates() {
     const listContainer = document.getElementById("newsList");
 
@@ -39,20 +39,16 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
                 <div class="postBody">${parsedBody}</div>
                 `;
             
-            const likeElement = document.createElement("div");
+            const likeButton = document.createElement("div");
 
-            likeElement.className = "lyket-container";
-            likeElement.innerHTML = `                
-                    <div
-                    data-lyket-type="like" 
-                    data-lyket-id="${post.title.replace(/\s+/g, '-').toLowerCase()}" 
-                    data-lyket-namespace="devilike-blog"
-                    data-lyket-template="heart"
-                    data-lyket-color-primary="#413f41"
-                    data-lyket-color-highlight="#fca9fc"
-                    ></div>`
-            
-            postElement.appendChild(likeElement);
+            likeButton.className = "lyket-container";
+            likeButton.setAttribute("data-lyket-type", "like"); 
+            likeButton.setAttribute("data-lyket-id", post.id);
+            likeButton.setAttribute("data-lyket-namespace", "devilike-blog");
+            likeButton.setAttribute("data-lyket-theme", "heart");
+
+            postElement.appendChild(likeButton);
+
 
             listContainer.insertBefore(postElement, listContainer.firstChild);
 
@@ -62,11 +58,12 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
             listContainer.innerHTML = "<p>No new updates.</p>";
             
         } else {
-            // FIX: Load the Lyket script dynamically now that HTML elements are written to DOM
-            const lyketScript = document.createElement("script");
-            lyketScript.src = "https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_9dc0c986b24d96687df99fd2a3da29";
-            document.body.appendChild(lyketScript);
+            
+            if (typeof Lyket !== 'undefined' && typeof Lyket.rehydrate === 'function') {
+                Lyket.rehydrate();
+                }
             }
+        
         }
         
         catch (error) {
