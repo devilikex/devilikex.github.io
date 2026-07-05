@@ -89,10 +89,30 @@ h2 {
     margin: 10px auto;
 }
 
-.lyket-container {
-    display: block !important;
-    min-width: 60px !important;
-    min-height: 40px !important;
-    background-color: rgba(255, 0, 0, 0.1); /* Adds a faint red box */
-    border: 1px dashed red; /* Outlines where the button should be */
+
+.native-like-btn {
+    background-color: #e5daff;
+    border: 1px solid #a07ed9;
+    color: #8c7bce;
+    padding: 6px 12px;
+    font-size: 17px;
+    font-family: inherit;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.native-like-btn:hover {
+    background-color: #a596e0;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.native-like-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }

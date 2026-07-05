@@ -41,14 +41,40 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
 
             listContainer.insertBefore(postElement, listContainer.firstChild);
             
+           
             const likeId = postElement.querySelector('.postTitle').textContent.replace(/\s+/g, '-').toLowerCase();
-            const likeBtnSpan = document.createElement('span');
-            likeBtnSpan.className = 'likebtn-wrapper';
-            likeBtnSpan.setAttribute('data-theme', 'padded');
-            likeBtnSpan.setAttribute('data-ef_subscr', 'false');
-            likeBtnSpan.setAttribute('data-identifier', likeId);
 
-            postElement.appendChild(likeBtnSpan);
+            
+            const likeBtn = document.createElement('button');
+            likeBtn.className = 'native-like-btn';
+            
+            const apiNamespace = "devilikex_github_io";
+            
+           
+            fetch(`https://countapi.xyz{apiNamespace}/${likeId}`)
+                .then(res => res.json())
+                .then(data => {
+                    likeBtn.innerHTML = `🤍 ${data.value || 0}`;
+                })
+                .catch(() => {
+                    likeBtn.innerHTML = `🤍 0`;
+                });
+
+            
+            likeBtn.addEventListener('click', async () => {
+                likeBtn.disabled = true; // Prevent duplicate multi-clicks
+                try {
+                    const res = await fetch(`https://countapi.xyz{apiNamespace}/${likeId}`);
+                    const data = await res.json();
+                    likeBtn.innerHTML = `🤍 ${data.value}`;
+                } catch (err) {
+                    console.error("Failed to update like count", err);
+                } finally {
+                    likeBtn.disabled = false;
+                }
+            });
+
+            postElement.appendChild(likeBtn);
         });
 
         if (posts.length === 0) {
