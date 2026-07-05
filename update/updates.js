@@ -37,22 +37,10 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
                 <h3 class="postTitle">${post.title}</h3>
                 <span class="postDate">${postDate}</span>
                 <div class="postBody">${parsedBody}</div>
+                <div class="blogLikes" id="blog-like"></div>
                 `;
+
             
-            const likeButton = document.createElement("div");
-            const fallbackId = post.title
-                .toLowerCase()
-                .replace(/[^a-z0-9\s]/g, '') // remove special characters
-                .replace(/\s+/g, '-');        // replace spaces with hyphens
-            const finalId = post.id || fallbackId;
-
-            likeButton.className = "lyket-container";
-            likeButton.setAttribute("data-lyket-type", "like"); 
-            likeButton.setAttribute("data-lyket-id", finalId);
-            likeButton.setAttribute("data-lyket-namespace", "devilike-blog");
-            likeButton.setAttribute("data-lyket-theme", "heart");
-
-            postElement.appendChild(likeButton);
 
 
             listContainer.insertBefore(postElement, listContainer.firstChild);
@@ -60,15 +48,16 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
         });
 
         if (posts.length === 0) {
-            listContainer.innerHTML = "<p>No new updates.</p>";
+            listContainer.innerHTML = "<p>No Updates.</p>";
             
-        } else {
-            
-            if (typeof Lyket !== 'undefined' && typeof Lyket.rehydrate === 'function') {
-                Lyket.rehydrate();
-                }
-            }
-        
+        } 
+
+        if (window.lyket && typeof window.lyket.reinit === 'function') {
+            window.lyket.reinit();
+        } else if (window.lyket && typeof window.lyket.rehydrate === 'function') {
+            window.lyket.rehydrate();
+        }
+
         }
         
         catch (error) {
