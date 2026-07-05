@@ -40,10 +40,15 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
                 `;
             
             const likeButton = document.createElement("div");
+            const fallbackId = post.title
+                .toLowerCase()
+                .replace(/[^a-z0-9\s]/g, '') // remove special characters
+                .replace(/\s+/g, '-');        // replace spaces with hyphens
+            const finalId = post.id || fallbackId;
 
             likeButton.className = "lyket-container";
             likeButton.setAttribute("data-lyket-type", "like"); 
-            likeButton.setAttribute("data-lyket-id", post.id);
+            likeButton.setAttribute("data-lyket-id", finalId);
             likeButton.setAttribute("data-lyket-namespace", "devilike-blog");
             likeButton.setAttribute("data-lyket-theme", "heart");
 
