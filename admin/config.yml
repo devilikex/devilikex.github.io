@@ -13,7 +13,7 @@ collections:
         name: "blog_updates"
         fields:
           - label: "Blog Posts"
-            name: "post"
+            name: "posts"
             widget: "list"
             fields:
               - {label: "ID", name: "id", widget: "hidden", default: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}" }}
