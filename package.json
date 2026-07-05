@@ -18,6 +18,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@lyket/widget": "^2.1.0",
     "unpkg": "^0.2.0"
   }
 }

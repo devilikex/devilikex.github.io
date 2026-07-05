@@ -37,28 +37,29 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
                 <h3 class="postTitle">${post.title}</h3>
                 <span class="postDate">${postDate}</span>
                 <div class="postBody">${parsedBody}</div>
-                <div class="blogLikes" id="blog-like"></div>
                 `;
 
-            
-
-
             listContainer.insertBefore(postElement, listContainer.firstChild);
+            
+            const likeId = postElement.querySelector('.postTitle').textContent.replace(/\s+/g, '-').toLowerCase();
+            const likeBtnSpan = document.createElement('span');
+            likeBtnSpan.className = 'likebtn-wrapper';
+            likeBtnSpan.setAttribute('data-theme', 'padded');
+            likeBtnSpan.setAttribute('data-ef_subscr', 'false');
+            likeBtnSpan.setAttribute('data-identifier', likeId);
 
+            postElement.appendChild(likeBtnSpan);
         });
 
         if (posts.length === 0) {
             listContainer.innerHTML = "<p>No Updates.</p>";
             
-        } 
-
-        if (window.lyket && typeof window.lyket.reinit === 'function') {
-            window.lyket.reinit();
-        } else if (window.lyket && typeof window.lyket.rehydrate === 'function') {
-            window.lyket.rehydrate();
+            } 
+            if (typeof window.likebtn_init === 'function') {
+            window.likebtn_init();
         }
-
         }
+        
         
         catch (error) {
             console.error("Error fetching updates: ", error);
@@ -67,4 +68,6 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
     }
 
     document.addEventListener("DOMContentLoaded", getUpdates);
+
+
     //getUpdates();
