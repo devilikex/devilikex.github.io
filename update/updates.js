@@ -21,7 +21,7 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
         const data = await response.json();
         listContainer.innerHTML = "";
 
-        const posts = data.posts;
+        const posts = data.post;
 
         const md = (typeof Remarkable !== 'undefined') ? new Remarkable() : new remarkable.Remarkable();
 
