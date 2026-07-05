@@ -27,35 +27,45 @@ if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
 
 
         posts.forEach(post => {
+
             const postDate = new Date(post.date).toLocaleDateString();
             const parsedBody = md.render(post.body || "");
             const postElement = document.createElement("article");
-            postElement.className = "blogPost";
             
-postElement.innerHTML = `
-    <h3 class="postTitle">${post.title}</h3>
-    <span class="postDate">${postDate}</span>
-    <div class="postBody">${parsedBody}</div>
-    
-    <div class="blogLikes">
-        <div 
-          data-lyket-type="like" 
-          data-lyket-id="${post.title.replace(/\s+/g, '-').toLowerCase()}" 
-          data-lyket-namespace="devilike-blog"
-        ></div>
-    </div>
-`;
+            postElement.className = "blogPost";
+            postElement.innerHTML = `
+                <h3 class="postTitle">${post.title}</h3>
+                <span class="postDate">${postDate}</span>
+                <div class="postBody">${parsedBody}</div>
+                `;
+            
+            const likeElement = document.createElement("div");
+
+            likeElement.className = "lyket-container";
+            likeElement.innerHTML = `                
+                    <div
+                    data-lyket-type="like" 
+                    data-lyket-id="${post.title.replace(/\s+/g, '-').toLowerCase()}" 
+                    data-lyket-namespace="devilike-blog"
+                    data-lyket-template="heart"
+                    data-lyket-color-primary="#413f41"
+                    data-lyket-color-highlight="#fca9fc"
+                    ></div>`
+            
+            postElement.appendChild(likeElement);
 
             listContainer.insertBefore(postElement, listContainer.firstChild);
 
         });
 
-        if (window.lyket && typeof window.lyket.reparse === 'function') {
-        window.lyket.reparse();
-            }
-
         if (posts.length === 0) {
             listContainer.innerHTML = "<p>No new updates.</p>";
+            
+        } else {
+            // FIX: Load the Lyket script dynamically now that HTML elements are written to DOM
+            const lyketScript = document.createElement("script");
+            lyketScript.src = "https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_9dc0c986b24d96687df99fd2a3da29";
+            document.body.appendChild(lyketScript);
             }
         }
         
@@ -65,5 +75,5 @@ postElement.innerHTML = `
             }
     }
 
-    //document.addEventListener("DOMContentLoaded", getUpdates);
-    getUpdates();
+    document.addEventListener("DOMContentLoaded", getUpdates);
+    //getUpdates();

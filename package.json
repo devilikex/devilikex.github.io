@@ -1,0 +1,23 @@
+{
+  "name": "devilikeweb",
+  "version": "1.0.0",
+  "description": "github hosted webpage",
+  "homepage": "https://github.com/devilikex/devilikex.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/devilikex/devilikex.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devilikex/devilikex.github.io.git"
+  },
+  "license": "ISC",
+  "author": "devilike",
+  "type": "commonjs",
+  "main": "updates.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "unpkg": "^0.2.0"
+  }
+}

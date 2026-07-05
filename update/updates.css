@@ -89,10 +89,8 @@ h2 {
     margin: 10px auto;
 }
 
-.blogLikes {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px dashed #ede7ff;
+.lyket-container {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 20px;
 }
