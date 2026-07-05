@@ -1,5 +1,5 @@
 const jsonURL = "https://devilikex.github.io/_data/updates.json";
-
+//idk
 async function getUpdates() {
     const listContainer = document.getElementById("newsList");
 
