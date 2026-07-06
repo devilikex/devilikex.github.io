@@ -58,7 +58,24 @@ h2 {
 
 }
 
-.card {
-    background-color: #ede7ff;
-    height: 200px;
+.grid .card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #ede7ff;
+    overflow: hidden; /* Prevents overflow blowouts */
+    align-items: center;
+    text-align: center;
+    font-family: 'chewy', sans-serif;
+}
+
+/* Limit images inside your grid card bodies from scaling up massively */
+.grid .card .postBody img {
+    max-width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
 }
