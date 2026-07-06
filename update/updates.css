@@ -58,27 +58,27 @@ h2 {
 .news {
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* 1. FORCES POSTS TO STACK DOWNWARD */
-    align-items: center;    /* 2. CENTERS POSTS HORIZONTALLY */
+    flex-direction: column; 
+    align-items: center;    
     
     width: 60%;
-    height: auto;           /* 3. ALLOWS THE PURPLE BOX TO STRETCH DOWNWARD */
+    height: auto;         
     background-color: #ede7ff;
-    padding: 20px;          /* Adds clean breathing room inside the purple box */
-    border-radius: 8px;     /* Optional: Rounds the corners to look cleaner */
-    margin-left: 20px;     /* Adds space between the purple box and the right sidebar */
+    padding: 20px;          
+    border-radius: 8px;     
+    margin-left: 20px;     
 }
 
 .update {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 30%; /* Your right sidebar width */
+    width: 30%; 
     background-color: #ede7ff;
     padding: 25px; 
     border-radius: 12px;
-    height: fit-content; /* FIXED: Prevents this box from freezing at 400px */
-    margin-right: 20px; /* Adds space between the purple box and the left news section */
+    height: fit-content; 
+    margin-right: 20px; 
 }
 
 .postBody img {

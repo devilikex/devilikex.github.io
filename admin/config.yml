@@ -20,3 +20,16 @@ collections:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Publish Date", name: "date", widget: "datetime"}
               - {label: "Body", name: "body", widget: "markdown"}
+
+  - file: "_data/mods_updates.json"
+    label: "Shown Mods"
+    name: "mods_posts_file"
+    fields:
+        - label: "Grid Cards Data"
+          name: "posts"
+          widget: "list"
+          fields:
+              - {label: "ID", name: "id", widget: "hidden", default: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Publish Date", name: "date", widget: "datetime"}
+              - {label: "Body", name: "body", widget: "markdown"}
