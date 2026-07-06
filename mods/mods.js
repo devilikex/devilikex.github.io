@@ -21,7 +21,7 @@ async function gridUpdate() {
 
         const data = await response.json(); 
 
-        const posts = data.posts;
+        const posts = data.posts || [];
         const md = (typeof Remarkable !== 'undefined') ? new Remarkable() : new remarkable.Remarkable();
 
         posts.forEach(post => {
