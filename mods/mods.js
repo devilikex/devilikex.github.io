@@ -9,7 +9,7 @@ async function gridUpdate() {
     }
 
     if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
-        setTimeout(getUpdates, 100);
+        setTimeout(gridUpdate, 100);
             return;
     }
 
@@ -19,7 +19,7 @@ async function gridUpdate() {
             throw new Error("failed to fetch" + response.status);
         }
 
-        const data = await response.json; 
+        const data = await response.json(); 
 
         const posts = data.posts;
         const md = (typeof Remarkable !== 'undefined') ? new Remarkable() : new remarkable.Remarkable();
@@ -40,7 +40,7 @@ async function gridUpdate() {
         });
 
         if (posts.length === 0) {
-            gridContainer.innerHTML = "<p>There are no mods to show</p>";
+            gridUpdate.innerHTML = "<p>There are no mods to show</p>";
         }
     }
 
