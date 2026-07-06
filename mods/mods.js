@@ -5,7 +5,6 @@ async function gridUpdate() {
     const grid = document.getElementById("grid");
 
     if (!grid) {
-        console.error("grid missing!");
     }
 
     if (typeof Remarkable === 'undefined' && typeof remarkable === 'undefined') {
@@ -17,9 +16,7 @@ async function gridUpdate() {
         const response = await fetch(jsonURL);
         if (!response.ok) {
             throw new Error("failed to fetch" + response.status);
-        } else {
-            console.log("fetched");
-        }
+        } 
 
         const data = await response.json(); 
 
@@ -28,7 +25,6 @@ async function gridUpdate() {
         const md = (typeof Remarkable !== 'undefined') ? new Remarkable() : new remarkable.Remarkable();
 
         posts.forEach(post => {
-            console.log("card creation: ${post.title}");
             const postDate = new Date(post.date).toLocaleDateString();
             const parsedBody = md.render(post.body || "");
             
