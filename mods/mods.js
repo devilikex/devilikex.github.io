@@ -17,14 +17,18 @@ async function gridUpdate() {
         const response = await fetch(jsonURL);
         if (!response.ok) {
             throw new Error("failed to fetch" + response.status);
+        } else {
+            console.log("fetched");
         }
 
         const data = await response.json(); 
 
-        const posts = data.posts || [];
+        const posts = Array.isArray(data) ? data : (data.posts || []);
+        console.log("parsing array: ", posts);
         const md = (typeof Remarkable !== 'undefined') ? new Remarkable() : new remarkable.Remarkable();
 
         posts.forEach(post => {
+            console.log("card creation: ${post.title}");
             const postDate = new Date(post.date).toLocaleDateString();
             const parsedBody = md.render(post.body || "");
             
