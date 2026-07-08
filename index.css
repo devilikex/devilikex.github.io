@@ -88,18 +88,14 @@
     margin-bottom: -80px;
 }
 
-#nexus, #kofi {
-    
-    height: 50px;
-    margin-top: -250px;
+.buttons img {
+    width: 20%; 
     padding: 20px 20px;
-    
 }
 
-.buttons {
-    
+#email {
+    width: 20%;
 }
-
 
 .icons img {
     width: 70px;
