@@ -88,21 +88,42 @@
     margin-bottom: -80px;
 }
 
-.buttons img {
-    width: 20%; 
-    padding: 20px 20px;
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    
 }
 
-#email {
-    width: 20%;
+.buttons a {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+}
+.buttons img {
+    width: 100%; 
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+   
+}
+
+.icons a {
+    display: flex;
+    justify-content: center;
+    width: 13%;
+
 }
 
 .icons img {
-    width: 70px;
-    height: 70px; 
-    padding: 5px 20px; 
-}
-
-#email {
-    padding: 20px 20px; 
+    width: 100%;
+    height: auto;
 }
