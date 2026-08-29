@@ -88,7 +88,7 @@
     margin-bottom: -80px;
 }
 
-.buttons {
+.pill {
     display: flex;
     flex-direction: row;
     justify-content: center;
