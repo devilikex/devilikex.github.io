@@ -49,6 +49,19 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-family: 'chewy', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    font-family: 'chewy', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #515152;
+}
+
 .container {
     display: flex;
     flex-direction: row-reverse;
@@ -69,7 +82,7 @@ h2 {
     margin-left: 20px;     
 }
 
-.update {
+.form {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -115,4 +128,25 @@ h2 {
 .native-like-btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.form{
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.forms{
+    text-align: center;
+    font-family: 'chewy', sans-serif;
+    
+}
+
+.forms p {
+    margin-bottom: 20px;
+}
+
+.submit{
+    margin-top: 20px;
+    width: 50%;
+    height: 50%;
 }
