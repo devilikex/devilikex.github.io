@@ -91,6 +91,7 @@
     display: flex;
     margin-top: 40px;
     margin-right: 40px;
+    height: 150px;
     background-color: #ede7ff;
     flex-direction: column;
     justify-content: flex-end;
@@ -100,8 +101,9 @@
 
 #cloud {
     width: 50%;
-    height: 50%;
+    height: 1000%;
     margin-bottom: -80px;
+    
 }
 
 .container-2{
