@@ -34,8 +34,8 @@
 }
 
 #bella {
-    width: 150px;
-    height: 150px;
+    width: 60px;
+    height: 60px;
 }
 
 .chewy-regular {
@@ -175,10 +175,6 @@ li {
     scroll-snap-type: x mandatory;
     scroll-snap-align: center;
     flex: 0 0 100%;
-}
-
-li:nth-child(even) {
-  background-color: rgb(219, 172, 255);
 }
 
 #carouselExampleIndicators {

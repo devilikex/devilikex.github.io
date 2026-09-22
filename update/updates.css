@@ -8,7 +8,7 @@
     box-shadow: 2px 1px 2px 1px rgb(197, 179, 213);
 
     background-color: white;
-    font-family: 'chewy', sans-serif;
+    font-family: 'Cherry Bomb One', 'chewy', sans-serif;
 
     position: sticky;
     top: 0;
@@ -19,7 +19,8 @@
     font-size: 18px;
     padding: 1rem;
     text-decoration: none;
-    color: black;
+    color: #474745;
+    font-family: 'Cherry Bomb One', sans-serif;
 }
 
 .header a:hover {
@@ -33,8 +34,8 @@
 }
 
 #bella {
-    width: 150px;
-    height: 150px;
+    width: 60px;
+    height: 60px;
 }
 
 .chewy-regular {
@@ -43,16 +44,59 @@
   font-style: normal;
 }
 
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.moirai-one-regular {
+  font-family: "Moirai One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outline {
+    font-family: 'Cherry Bomb One', sans-serif;
+    color: #ede7ff;/* Inside text color */
+    
+        -webkit-text-stroke: 1px #8b789f;
+        text-shadow: 
+
+        1px 1px 0px #9d7cc4,
+        2px 2px 0px #8e6eac, /* Dark 3D layer */
+        3px 3px 0px #6b4294,
+        4px 4px 0px #6e5789;
+}
+
+.outline-2 {
+    font-family: 'Cherry Bomb One', sans-serif;
+    color: #ede7ff;/* Inside text color */
+    
+        -webkit-text-stroke: 0.5px #8b789f;
+               text-shadow: 
+
+        1px 1px 0px #b38fdc,
+        2px 2px 0px #8e6eac;
+}
+
+h1 {
+    font-family: 'Cherry Bomb One', sans-serif;
+    color: rgb(44, 44, 44);
+}
+
 h2 {
-    font-family: 'chewy', sans-serif;
-    font-size: 35px;
+    margin-top: 40px;
+    font-family: 'Cherry Bomb One', sans-serif;
     text-align: center;
+    color: rgb(75, 56, 79);
 }
 
 h3 {
-    font-family: 'chewy', sans-serif;
+    font-family: 'Cherry Bomb One', sans-serif;
     font-size: 20px;
     text-align: center;
+    color: rgb(75, 56, 79);
 }
 
 p {
