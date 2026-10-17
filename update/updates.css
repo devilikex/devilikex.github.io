@@ -56,6 +56,13 @@
   font-style: normal;
 }
 
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .outline {
     font-family: 'Cherry Bomb One', sans-serif;
     color: #ede7ff;/* Inside text color */
@@ -100,7 +107,7 @@ h3 {
 }
 
 p {
-    font-family: 'chewy', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 15px;
     text-align: center;
     color: #515152;
@@ -181,7 +188,7 @@ p {
 
 .forms{
     text-align: center;
-    font-family: 'chewy', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     
 }
 
@@ -189,8 +196,32 @@ p {
     margin-bottom: 20px;
 }
 
+.forms .email {
+    background-color: #f6ecff;
+    outline: none;
+    border: 1px solid #b38fdc;
+    border-radius: 6px;
+    
+}
+
 .submit{
     margin-top: 20px;
     width: 50%;
-    height: 50%;
+    height: 55%;
+    background-color: #c5b6df;
+    border: 1px;
+    border-radius: 6px;
+    font-family: 'Cherry Bomb One', sans-serif;
+    color: #8a72a1;
+    box-shadow: 2px 2px #9d7cc4;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #b3a1d1;
+}
+
+.submit:active {
+    transform: scale(0.95);
+    background-color: #c5b6df;
 }

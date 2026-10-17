@@ -56,6 +56,13 @@
   font-style: normal;
 }
 
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .outline {
     font-family: 'Cherry Bomb One', sans-serif;
     color: #ede7ff;/* Inside text color */
@@ -247,6 +254,55 @@ li {
     border-radius: 25px;
     background-color: #ede7ff;
 }
+
+.popup {
+  position: fixed;       
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;       
+ background-color: rgba(237, 231, 255, 0.85); 
+  color: #8e6eac;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+  z-index: 1000;
+  width: 400px;
+  border: 2px solid rgba(34, 34, 34, 0.15);
+  font-family: 'Cherry Bomb One', sans-serif;
+  box-shadow: 0 10px 25px rgba(122, 71, 167, 0.15), 
+              0 3px 10px rgba(116, 69, 157, 0.08);
+}
+
+.popup.show {            
+  display: block;
+}
+.popup .popupText {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popbtn {
+    font-family: 'Cherry Bomb One', sans-serif;
+  cursor: pointer;
+  background-color: #8e6eac;
+  color: #ffffff;
+  border-radius: 6px;
+  border: 0px;
+}
+
+.popbtn:hover {
+    background-color: #6e5789;
+}
+
+.popbtn:active {
+    box-shadow: 1px 1px 1px #644e7e;
+    outline: none;
+    transform: scale(0.95);
+
+}
+
+
 
 @media (min-width: 1000px) {
 
