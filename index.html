@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Chewy&family=Indie+Flower&family=Moirai+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Chewy&family=Indie+Flower&family=Moirai+One&display=swap" rel="stylesheet">
         <body>
         <div class="header">
             <h1 class="outline-2">Devilike</h1>
@@ -25,22 +25,22 @@
         <div class="link-bar">
             <div class="social-links">
                     <div class="icons">
-                    <a href="https://discord.com/users/1390397974240165959">
+                    <a href="https://discord.com/users/1390397974240165959" data-toggle="tooltip" title="Discord">
                     <img src="elements/discord.png" alt="discord" id="disc">
                     </a>
-                    <a href="https://www.youtube.com/">
+                    <a href="https://www.youtube.com/" data-toggle="tooltip" title="Youtube">
                     <img src="elements/youtube.png" alt="youtube" id="yt">                        
                     </a>
-                    <a href="https://github.com/devilikex">
+                    <a href="https://github.com/devilikex" data-toggle="tooltip" title="Github">
                     <img src="elements/github.png" alt="github" id="git">                        
                     </a>
-                    <a href="https://www.nexusmods.com/profile/DeviIike/mods">
+                    <a href="https://www.nexusmods.com/profile/DeviIike/mods" data-toggle="tooltip" title="Nexus Mods">
                     <img src="elements/nexus2.png" alt="nexus" id="nexus">                        
                     </a>
-                    <a href="https://www.ko-fi.com/devilike">
+                    <a href="https://www.ko-fi.com/devilike" data-toggle="tooltip" title="Ko-Fi">
                     <img src="elements/kofi2.png" alt="kofi" id="kofi">                        
                     </a>
-                    <a href="https://www.instagram.com/devilikex">
+                    <a href="https://www.instagram.com/devilikex" data-toggle="tooltip" title="Instagram">
                     <img src="elements/insta.png" alt="insta" id="insta">                        
                     </a>
                 </div>
@@ -119,6 +119,9 @@
                 popup.classList.remove("show");
             });
             
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+                });
             
 
         </script>
