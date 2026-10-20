@@ -34,19 +34,19 @@ collections:
               - {label: "Publish Date", name: "date", widget: "datetime"}
               - {label: "Body", name: "body", widget: "markdown"}
               
-            - name: "config"
-                label: "Site Settings"
-                icon: "settings" # Displays a clean gear icon in Sveltia
-                delete: false   # Safeguard so you don't accidentally delete your settings
-                files:
-                  - name: "settings"
-                    label: "Global Settings"
-                    file: "settings.json" # Change this path to match your project directory
-                    format: "json-vars"
-                    fields:
-                      - label: "General Settings"
-                        name: "general_section"
-                        widget: "object"
-                        fields:
-                          - { label: "Site Title", name: "title", widget: "string", required: true }
-                          - { label: "Site Description (SEO)", name: "description", widget: "text" }
+  - name: "config"
+    label: "Site Settings"
+    icon: "settings" # Displays a clean gear icon in Sveltia
+    delete: false   # Safeguard so you don't accidentally delete your settings
+    files:
+      - name: "settings"
+        label: "Global Settings"
+        file: "settings.json" # Change this path to match your project directory
+        format: "json-vars"
+        fields:
+          - label: "General Settings"
+            name: "general_section"
+            widget: "object"
+            fields:
+              - { label: "Site Title", name: "title", widget: "string", required: true }
+              - { label: "Site Description (SEO)", name: "description", widget: "text" }
