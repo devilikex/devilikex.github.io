@@ -1,9 +1,10 @@
 {
   "posts": [
     {
+      "id": "",
       "title": "test",
       "date": "2026-07-05T20:11",
-      "body": "![](/images/uploads/Blue%20Diamond.png)"
+      "body": "[![](/images/uploads/9741-1781581573-336143799.webp \"Wow new update test yay\")](https://www.nexusmods.com/marvelrivals/mods/9741)"
     }
   ]
 }
